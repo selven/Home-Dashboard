@@ -56,7 +56,6 @@ var main = {
 			$('#middle .weather').html(self.fahrenheit_to_celsius(result.currently.temperature) + '&deg;');
 			var i = 0;
 			$.each(result.hourly.data, function(key, value) {
-				console.log(value);
 				if(i < 12) {
 					if(self.first) {
 						self.first = false;
@@ -105,9 +104,15 @@ var main = {
 		});
 	},
 	
+	position_names : function() {
+		var width = $('#middle .date').width();
+		$('#travel-time').width(width);
+	},
+	
 	update_time : function() {
 		$('#middle .time').text(moment().format('H:mm'));
 		$('#middle .date').text(moment().format('Do MMMM YYYY'));
+		this.position_names();
 	},
 	
 	run_intervals : function() {
