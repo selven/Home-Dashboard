@@ -71,7 +71,7 @@ $lines: (bakerloo, #894e24),
 			background-size: 20px 20px;
 		}
 		
-		&.minor_delays span {
+		&.minor_delays span, &.part_suspended span {
 			background: url('../images/minor_delays.svg') 50% 50% no-repeat;
 			background-size: 20px 20px;
 		}

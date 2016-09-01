@@ -56,6 +56,7 @@ var main = {
 			$('#middle .weather').html(self.fahrenheit_to_celsius(result.currently.temperature) + '&deg;');
 			var i = 0;
 			$.each(result.hourly.data, function(key, value) {
+				console.log(value);
 				if(i < 12) {
 					if(self.first) {
 						self.first = false;
@@ -68,7 +69,7 @@ var main = {
 					parent.find('.time').text(moment(value.time, 'X').format('H') + ':00');
 					parent.find('.temperature').html(self.fahrenheit_to_celsius(value.temperature) + '&deg;');
 					parent.find('.rain').animate({
-						height: value.precipProbability + '%'
+						height: value.precipProbability * 100 + '%'
 					});
 					
 					i++;

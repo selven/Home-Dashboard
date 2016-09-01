@@ -6,13 +6,16 @@ var config = {
 	},
 	api_keys : {
 		nation_rail : '',
-		// not currently used
-		tfl : ''
+		// you can use tfl without an api key, but there is a limit
+		tfl : '',
+		forecast_io : ''
 	},
 	trains : {
 		start : 'HGR',
 		end : 'CHX'
-	}
+	},
+	// weather lat/long
+	weather : ''
 };
 
 module.exports = config;

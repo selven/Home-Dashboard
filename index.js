@@ -21,7 +21,7 @@ app.get('/status', function (req, res) {
 });
 
 app.get('/weather', function (req, res) {
-	request('https://api.forecast.io/forecast/172a8d5f40ecd870c484634ca9d66ba2/51.5100974,-0.1367674', function (error, response, body) {
+	request('https://api.forecast.io/forecast/'+config.api_keys.forecast_io+'/'+config.weather, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			var weather = {};
 			body = JSON.parse(body);
