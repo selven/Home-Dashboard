@@ -1,0 +1,20 @@
+{
+  "name": "travel-updates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "request": "^2.73.0"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  }
+}

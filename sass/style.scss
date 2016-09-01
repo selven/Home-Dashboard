@@ -1,0 +1,251 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: arial;
+	font-size: 12px;
+	background: #333;
+}
+
+#frame {
+	width: 800px;
+	height: 480px;
+ 	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+$lines: (bakerloo, #894e24),
+		(circle, #ffce00),
+		(hammersmith_and_city, #d799af),
+		(metropolitan, #751056),
+		(piccadilly, #0019a8),
+		(waterloo_and_city, #76d0bd),
+		(tfl_rail, #5a419c),
+		(trams, #6c0),
+		(central, #dc241f),
+		(district, #007229),
+		(jubilee, #6a7278),
+		(northern, #000),
+		(victoria, #00a0e2),
+		(london_overground, #e86a10),
+		(dlr, #00afad);
+
+#lines {
+	position: absolute;
+	top: 0;
+	left: -168px;
+	transition-duration: 1s;
+	z-index: 999;
+	
+	&.open {
+		left: 0;
+	}
+	
+	li {
+		height: 34px;
+		width: 200px;
+		line-height: 33px;
+		border-bottom: 2px solid #333;
+		color: #fff;
+		list-style: none;
+		box-sizing: border-box;
+		padding-left: 20px;
+		cursor: pointer;
+		
+		span {
+			float: right;
+			width: 33px;
+			height: 31px;
+		}
+		
+		&.good_service span {
+			background: url('../images/good_service.svg') 50% 50% no-repeat;
+			background-size: 20px 20px;
+		}
+		
+		&.severe_delays span {
+			background: url('../images/severe_delays.svg') 50% 50% no-repeat;
+			background-size: 20px 20px;
+		}
+		
+		&.minor_delays span {
+			background: url('../images/minor_delays.svg') 50% 50% no-repeat;
+			background-size: 20px 20px;
+		}
+	}
+	@each $line, $color in $lines {
+		li##{$line} {
+			background-color: $color;
+		}
+	}
+}
+
+#weather {
+	float: left;
+	position: absolute;
+	bottom: 10px;
+	left: 45px;
+	width: 100%;
+	
+    li {
+		float: left;
+		width: 67px;
+		text-align: center;
+		list-style: none;
+		margin-right: 7px;
+		color: #fff;
+		
+		canvas {
+			display: block;
+			margin-bottom: 5px;
+			z-index: 99;
+			position: relative;
+		}
+
+		span {
+			display: block;
+			position: relative;
+			z-index: 99;
+		}
+		
+		div.rain {
+			position: absolute;
+			bottom: 0;
+			background: #3fa9f5;
+			width: 67px;
+			z-index: 1;
+		}
+	}
+}
+
+#middle {
+	text-align: center;
+	margin-top: 63px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+
+	span.time {
+		font-size: 103px;
+		display: block;
+	}
+	
+	span.date {
+		font-size: 32px;
+		display: block;
+		margin-top: -10px;
+	}
+	
+	span.weather {
+		font-size: 75px;
+	}
+}
+
+#travel-time {
+	width: 240px;
+	margin: 0 auto;
+
+	li {
+		list-style: none;
+		font-size: 17px;
+		color: #808080;
+		display: inline-block;
+		width: 50%;
+		
+		&:nth-child(1) {
+			text-align: left;
+		}
+		
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+}
+
+#next-trains {
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	li {
+		width: 150px;
+		height: 100px;
+		list-style: none;
+		margin-bottom: 2px;
+		color: #fff;
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		overflow: hidden;
+		
+		&:nth-child(1) {
+			background: #00bf4d;
+		}
+		
+		&:nth-child(2) {
+			background: #007a3f;
+			
+			span.platform {
+				color: #007a3f;
+			}
+		}
+		
+		&:nth-child(3) {
+			background: #265639;
+			
+			span.platform {
+				color: #265639;
+			}
+		}
+		
+		span.time {
+			font-size: 33px;
+			margin-top: 10px;
+			display: block;
+		}
+		
+		span.platform {
+			background: #fff;
+			border-radius: 30px;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			display: inline-block;
+			color: #00bf4d;
+			font-weight: 500;
+			font-size: 16px;
+		}
+		
+		span.remaining {
+			font-size: 25px;
+			font-weight: 300;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: bottom;
+			
+			span {
+				font-size:16px;
+				font-weight: 100;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

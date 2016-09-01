@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+	head
+		title Home Dashboard
+		link(rel='stylesheet', href='css/style.css')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,500', rel='stylesheet')
+	body
+		#frame
+			ul#lines
+			#middle
+				span.time
+				span.date
+				#travel-time
+				span.weather
+			ul#next-trains
+			ul#weather
+				each _, i in Array(10)
+					li 
+						canvas(id='weather' + i, width=67, height=67)
+						span.time
+						span.temperature
+						.rain
+		script(src='js/jquery.js')
+		script(src='js/moment.js')
+		script(src='js/skycons.js')
+		script(src='js/main.js')
