@@ -17,3 +17,7 @@
 - start the app
 
 `npm start`
+
+- You can now view the dashboard
+
+`localhost:3000`
