@@ -1,6 +1,7 @@
 # Home-Dashboard
 
 ![alt text](https://i.imgur.com/MZ52SGp.jpg)
+![alt text](https://i.imgur.com/eMQhu0w.jpg)
 
 - Clone the repo
 
