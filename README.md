@@ -1,5 +1,7 @@
 # Home-Dashboard
 
+![alt text](https://i.imgur.com/MZ52SGp.jpg)
+
 - Clone the repo
 
 - Install node
