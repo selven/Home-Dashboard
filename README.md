@@ -6,6 +6,8 @@
 
 - Install node
 
+`https://nodejs.org/en/download/`
+
 - Install gulp
 
 `sudo npm install -g gulp`
